@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 const ViewProperty = ({id, name, selling_price, property_type, location}) => {
+    console.log(name)
     
     const navigate = useNavigate()
     function handleDelete(){
@@ -21,9 +22,10 @@ const ViewProperty = ({id, name, selling_price, property_type, location}) => {
       }
     return (
         <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
             {name}
             </th>
+            
             <td className="px-6 py-4">
             {property_type}
             </td>

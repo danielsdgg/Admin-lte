@@ -4,4 +4,10 @@
     
 }
 
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+}
+
 
