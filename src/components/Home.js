@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({name, image}) => {
   return (
     <div>
         {/* Content Wrapper. Contains page content */}

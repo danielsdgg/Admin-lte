@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const NavBar = () => {
+const NavBar = ({image, name}) => {
   return (
     <div>
          {/* Main Sidebar Container */}
@@ -15,10 +16,10 @@ const NavBar = () => {
     {/* Sidebar user panel (optional) */}
     <div className="user-panel mt-3 pb-3 mb-3 d-flex">
       <div className="image">
-        <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+        <img src={image} className="img-circle elevation-2" alt="User Image" />
       </div>
       <div className="info">
-        <a href="#" className="d-block">Alexander Pierce</a>
+        <a href="#" className="d-block">{name}</a>
       </div>
     </div>
     {/* SidebarSearch Form */}
@@ -45,7 +46,7 @@ const NavBar = () => {
               <i className="right fas fa-angle-left" />
             </p>
           </a>
-          <ul className="nav nav-treeview">
+          {/* <ul className="nav nav-treeview">
             <li className="nav-item">
               <a href="./index.html" className="nav-link active">
                 <i className="far fa-circle nav-icon" />
@@ -64,7 +65,7 @@ const NavBar = () => {
                 <p>Dashboard v3</p>
               </a>
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li className="nav-item">
           <a href="pages/widgets.html" className="nav-link">
@@ -79,7 +80,7 @@ const NavBar = () => {
           <a href="#" className="nav-link">
             <i className="nav-icon fas fa-copy" />
             <p>
-              Layout Options
+              Users
               <i className="fas fa-angle-left right" />
               <span className="badge badge-info right">6</span>
             </p>
@@ -88,28 +89,28 @@ const NavBar = () => {
             <li className="nav-item">
               <a href="pages/layout/top-nav.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Top Navigation</p>
+                <p>View Users</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/layout/top-nav-sidebar.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Top Navigation + Sidebar</p>
+                <p>Add New User</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/layout/boxed.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Boxed</p>
+                <p>Update User</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/layout/fixed-sidebar.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Fixed Sidebar</p>
+                <p>Delete User</p>
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a href="pages/layout/fixed-sidebar-custom.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Fixed Sidebar <small>+ Custom Area</small></p>
@@ -132,40 +133,33 @@ const NavBar = () => {
                 <i className="far fa-circle nav-icon" />
                 <p>Collapsed Sidebar</p>
               </a>
-            </li>
+            </li> */}
           </ul>
         </li>
         <li className="nav-item">
           <a href="#" className="nav-link">
             <i className="nav-icon fas fa-chart-pie" />
             <p>
-              Charts
+              Properties
               <i className="right fas fa-angle-left" />
             </p>
           </a>
           <ul className="nav nav-treeview">
             <li className="nav-item">
-              <a href="pages/charts/chartjs.html" className="nav-link">
-                <i className="far fa-circle nav-icon" />
-                <p>ChartJS</p>
-              </a>
+            <Link className='nav-link' to="/addproperties">Add Properties</Link>
             </li>
+            {/* <li className="nav-item">
+            <Link className='nav-link' to="/updateproperty/:id">Update Properties</Link>
+              
+            </li> */}
             <li className="nav-item">
-              <a href="pages/charts/flot.html" className="nav-link">
-                <i className="far fa-circle nav-icon" />
-                <p>Flot</p>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="pages/charts/inline.html" className="nav-link">
-                <i className="far fa-circle nav-icon" />
-                <p>Inline</p>
-              </a>
+            <Link className='nav-link' to="/properties">View Properties</Link>
+             
             </li>
             <li className="nav-item">
               <a href="pages/charts/uplot.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>uPlot</p>
+                <p>Delete Properties</p>
               </a>
             </li>
           </ul>
@@ -174,7 +168,7 @@ const NavBar = () => {
           <a href="#" className="nav-link">
             <i className="nav-icon fas fa-tree" />
             <p>
-              UI Elements
+              Bookings
               <i className="fas fa-angle-left right" />
             </p>
           </a>
@@ -182,28 +176,28 @@ const NavBar = () => {
             <li className="nav-item">
               <a href="pages/UI/general.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>General</p>
+                <p>Create Booking</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/UI/icons.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Icons</p>
+                <p>Update Booking</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/UI/buttons.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Buttons</p>
+                <p>Delete Booking</p>
               </a>
             </li>
             <li className="nav-item">
               <a href="pages/UI/sliders.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
-                <p>Sliders</p>
+                <p>View Booking</p>
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a href="pages/UI/modals.html" className="nav-link">
                 <i className="far fa-circle nav-icon" />
                 <p>Modals &amp; Alerts</p>
@@ -226,7 +220,7 @@ const NavBar = () => {
                 <i className="far fa-circle nav-icon" />
                 <p>Ribbons</p>
               </a>
-            </li>
+            </li> */}
           </ul>
         </li>
         <li className="nav-item">
